@@ -97,6 +97,7 @@ console.log(nisa.previousBackground);
 console.log(dan.favLanguage);
 console.log(mary.favInstructor);
 console.log(mary.catchPhrase);
+console.log(dan.catchPhrase);
 console.log(nisa.listSubject());
 (dan.demo('JavaScript IV'));
 (nisa.PRAssignment('JavaScript IV'));
