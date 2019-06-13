@@ -30,11 +30,11 @@ class student extends Instructor{
         super(attributes);
         this.previousBackground = attributes.previousBackground;
         this.className = attributes.className;
-        this.favSubject = attributes.favSubject;
+        this.favSubjects = attributes.favSubjects;
 
     }
-    listSubject(student){
-        this.favSubject.forEach(nisa => console.log(nisa))
+    listSubject(){
+        return `These are my favorite subjects: ${this.favSubjects}`
     };
     PRAssignment(subject){
         console.log(`${this.name} has submitted a PR for ${subject}`)
@@ -51,7 +51,7 @@ class ProjectManager extends Instructor{
         this.favInstructor = attributes.favInstructor;
     }
     standUp(channel){
-        console.log(`${this.name} announces to ${channel}, @channel standy times!`)
+        console.log(`${this.name} announces to ${channel}, @channel standup time!`)
     };
     debugsCode(student, subject){
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}`)
@@ -97,7 +97,8 @@ console.log(mary.favInstructor);
 console.log(mary.catchPhrase);
 console.log(dan.demo('JavaScript IV'));
 console.log(nisa.PRAssignment('JavaScript IV'));
-console.log(nisa.sprintChallenge('ES6'));
+console.log(nisa.sprintChallenge('JavaScript Fundamentals'));
 console.log(dan.grade(nisa, 'Javascript IV'));
 console.log(mary.standUp('Web21 Sprint'));
-console.log(mary.debugsCode(nisa, 'pretty buggy'));
+console.log(mary.debugsCode(nisa, 'Javascript IV'));
+console.log(nisa.listSubject());
