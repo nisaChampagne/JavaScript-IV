@@ -31,6 +31,7 @@ class student extends Instructor{
         this.previousBackground = attributes.previousBackground;
         this.className = attributes.className;
         this.favSubjects = attributes.favSubjects;
+        this.grade = attributes.grade;
 
     }
     listSubject(){
@@ -66,6 +67,7 @@ const nisa = new student({
     location: 'Ohio',
     previousBackground: 'Debt Collector',
     className: 'Web21',
+    grade: 90,
     favSubjects: ['Html', 'CSS', 'JavaScript'],
 });
 
@@ -96,9 +98,9 @@ console.log(dan.favLanguage);
 console.log(mary.favInstructor);
 console.log(mary.catchPhrase);
 console.log(nisa.listSubject());
-console.log(dan.demo('JavaScript IV'));
-console.log(nisa.PRAssignment('JavaScript IV'));
-console.log(nisa.sprintChallenge('JavaScript Fundamentals'));
-console.log(dan.grade(nisa, 'Javascript Fundamentals'));
-console.log(mary.standUp('Web21 Sprint'));
-console.log(mary.debugsCode(nisa, 'Javascript IV'));
+(dan.demo('JavaScript IV'));
+(nisa.PRAssignment('JavaScript IV'));
+(nisa.sprintChallenge('JavaScript Fundamentals'));
+(dan.grade(nisa, 'Javascript Fundamentals'));
+(mary.standUp('Web21 Sprint'));
+(mary.debugsCode(nisa, 'Javascript IV'));
