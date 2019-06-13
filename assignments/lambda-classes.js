@@ -9,23 +9,7 @@ class Person{
         return `Hello my name is ${this.name}, I am from ${this.location}`;
     }
 }
-class student extends Person{
-    constructor(attributes){
-        super(attributes);
-        this.previousBackground = attributes.previousBackground;
-        this.className = attributes.className;
-        this.favSubject = attributes.favSubject;
-    }
-    listSubject(student){
-        console.log(`${student.favSubject[0]}, ${student.favSubject[1]}, ${student.favSubject[3]} `)
-    };
-    PRAssignment(subject){
-        console.log(`${student.name} has submitted a PR for ${subject}`)
-    };
-    sprintChallenge(subject){
-        console.log(`${student.name} has begun sprint challenge on ${subject}`)
-    };
-}
+
 class Instructor extends Person{
     constructor(attributes){
         super(attributes);
@@ -38,6 +22,25 @@ class Instructor extends Person{
     };
     grade(student, subject){
         console.log(`${student.name} receives a perfect score on ${subject}`)
+    };
+}
+
+class student extends Instructor{
+    constructor(attributes){
+        super(attributes);
+        this.previousBackground = attributes.previousBackground;
+        this.className = attributes.className;
+        this.favSubject = attributes.favSubject;
+
+    }
+    listSubject(student){
+        console.log(`${student.favSubject[0]}, ${student.favSubject[1]}, ${student.favSubject[3]} `)
+    };
+    PRAssignment(subject){
+        console.log(`${student.name} has submitted a PR for ${subject}`)
+    };
+    sprintChallenge(subject){
+        console.log(`${student.name} has begun sprint challenge on ${subject}`)
     };
 }
 
