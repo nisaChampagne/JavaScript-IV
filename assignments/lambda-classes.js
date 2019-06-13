@@ -34,13 +34,13 @@ class student extends Instructor{
 
     }
     listSubject(student){
-        console.log(`${student.favSubject[0]}, ${student.favSubject[1]}, ${student.favSubject[3]} `)
+        this.favSubject.forEach(nisa => console.log(nisa))
     };
     PRAssignment(subject){
-        console.log(`${student.name} has submitted a PR for ${subject}`)
+        console.log(`${this.name} has submitted a PR for ${subject}`)
     };
     sprintChallenge(subject){
-        console.log(`${student.name} has begun sprint challenge on ${subject}`)
+        console.log(`${this.name} has begun sprint challenge on ${subject}`)
     };
 }
 
@@ -53,8 +53,8 @@ class ProjectManager extends Instructor{
     standUp(channel){
         console.log(`${this.name} announces to ${channel}, @channel standy times!`)
     };
-    debugsCode(studentObj, subject){
-        console.log(`${this.name} debugs ${studentObj.name}'s code on ${subject}`)
+    debugsCode(student, subject){
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`)
     };
 }
 
@@ -94,3 +94,10 @@ console.log(nisa.speak());
 console.log(nisa.previousBackground);
 console.log(dan.favLanguage);
 console.log(mary.favInstructor);
+console.log(mary.catchPhrase);
+console.log(dan.demo('JavaScript IV'));
+console.log(nisa.PRAssignment('JavaScript IV'));
+console.log(nisa.sprintChallenge('ES6'));
+console.log(dan.grade(nisa, 'Javascript IV'));
+console.log(mary.standUp('Web21 Sprint'));
+console.log(mary.debugsCode(nisa, 'pretty buggy'));
