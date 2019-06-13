@@ -85,3 +85,9 @@ const mary = new ProjectManager({
     favLanguage: 'Javascript',
     catchPhrase: "That looks AWESOME",
 });
+
+console.log(nisa.name);
+console.log(nisa.speak());
+console.log(nisa.previousBackground);
+console.log(dan.favLanguage);
+console.log(mary.favInstructor);
