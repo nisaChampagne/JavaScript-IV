@@ -60,6 +60,16 @@ class ProjectManager extends Instructor{
 }
 
 
+///students
+
+const joscelyn = new student({
+    name: "Joscelyn",
+    age: 29,
+    location: "California",
+    previousBackground: "English teacher",
+    className: 'Web21',
+    favSubjects: ["Computer Science", "Philosophy", "English"],
+});
 
 const nisa = new student({
     name: 'Nisa',
@@ -67,9 +77,12 @@ const nisa = new student({
     location: 'Ohio',
     previousBackground: 'Debt Collector',
     className: 'Web21',
-    grade: 90,
+    grade: 100,
     favSubjects: ['Html', 'CSS', 'JavaScript'],
 });
+
+
+///instructor
 
 const dan = new Instructor({
     name: 'Dan',
@@ -78,6 +91,20 @@ const dan = new Instructor({
     specialty: 'Relentless Debugger',
     favLanguage: 'JavaScript, Python, Elm, ReasonML, SmallTalk, Haskell, C#, Java, Rust, Go, Ruby, Crystal, Elixir, Lua, and Julia',
     catchPhrase: 'If you can do the thing, you can get paid to do the thing!',
+});
+
+
+///PMs
+
+const pat = new ProjectManager({
+    name: 'Pat',
+    age: '38',
+    gradClassName: 'WEB18',
+    favInstructor: 'Brett Madrid',
+    location: 'Petaluma, Ca',
+    specialty: 'Empathetic to the struggle of Redux',
+    favLanguage: 'JavaScript',
+    catchPhrase: 'Lets google that together.'
 });
 
 const mary = new ProjectManager({
@@ -91,17 +118,43 @@ const mary = new ProjectManager({
     catchPhrase: "That looks AWESOME",
 });
 
+///students console.logs
+
+///nisa
 console.log(nisa.name);
 console.log(nisa.speak());
 console.log(nisa.previousBackground);
+console.log(nisa.listSubject());
+(nisa.sprintChallenge('JavaScript Fundamentals'));
+(nisa.PRAssignment('JavaScript IV'));
+
+
+//joscelyn
+console.log(joscelyn.name);
+console.log(joscelyn.speak());
+console.log(joscelyn.previousBackground);
+console.log(joscelyn.listSubject());
+(joscelyn.sprintChallenge('JavaScript Fundamentals'));
+(joscelyn.PRAssignment('JavaScript IV'));
+
+
+///instructor
 console.log(dan.favLanguage);
+console.log(dan.catchPhrase);
+(dan.demo('JavaScript IV'));
+(dan.grade(nisa, 'Javascript Fundamentals'));
+(dan.grade(joscelyn, 'Javascript Fundamentals'));
+
+///PMs
+
+//mary
 console.log(mary.favInstructor);
 console.log(mary.catchPhrase);
-console.log(dan.catchPhrase);
-console.log(nisa.listSubject());
-(dan.demo('JavaScript IV'));
-(nisa.PRAssignment('JavaScript IV'));
-(nisa.sprintChallenge('JavaScript Fundamentals'));
-(dan.grade(nisa, 'Javascript Fundamentals'));
 (mary.standUp('Web21 Sprint'));
 (mary.debugsCode(nisa, 'Javascript IV'));
+
+//pat
+console.log(pat.favInstructor);
+console.log(pat.catchPhrase);
+(pat.standUp('Web21 Sprint'));
+(pat.debugsCode(nisa, 'Javascript IV'));
