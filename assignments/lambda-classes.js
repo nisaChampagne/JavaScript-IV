@@ -93,6 +93,15 @@ const dan = new Instructor({
     catchPhrase: 'If you can do the thing, you can get paid to do the thing!',
 });
 
+const janet = new Instructor({
+    name: 'Janet',
+    age: 'dust years old',
+    location: 'Florida',
+    specialty: 'Big nag',
+    favLanguage: 'JavaScript, Python',
+    catchPhrase: 'Why not both?',
+});
+
 
 ///PMs
 
@@ -139,11 +148,22 @@ console.log(joscelyn.listSubject());
 
 
 ///instructor
+
+//dan
 console.log(dan.favLanguage);
 console.log(dan.catchPhrase);
 (dan.demo('JavaScript IV'));
 (dan.grade(nisa, 'Javascript Fundamentals'));
 (dan.grade(joscelyn, 'Javascript Fundamentals'));
+
+//janet
+console.log(janet.favLanguage);
+console.log(janet.catchPhrase);
+console.log(janet.age);
+(janet.demo('JavaScript IV'));
+(janet.grade(nisa, 'Javascript Fundamentals'));
+(janet.grade(joscelyn, 'Javascript Fundamentals'));
+
 
 ///PMs
 
